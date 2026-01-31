@@ -43,7 +43,7 @@ const benefits = [
 const PlansSection = () => {
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Olá, quero começar minha consultoria de treino.");
-    window.open(`https://wa.me/5599999999999?text=${message}`, "_blank");
+    window.open(`https://wa.me/5518991415772?text=${message}`, "_blank");
   };
 
   return (

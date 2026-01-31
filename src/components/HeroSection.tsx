@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import logoF5 from "@/assets/logo-f5.jpeg";
+import logoF5 from "@/assets/logo-f5.png";
 import heroImage from "@/assets/hero-gym.jpg";
 
 interface HeroSectionProps {
@@ -25,11 +25,11 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
       {/* Content */}
       <div className="relative z-10 max-w-2xl mx-auto text-center animate-fade-up">
         {/* Logo */}
-        <div className="mb-8">
+        <div className="mb-10">
           <img
             src={logoF5}
             alt="F5 - Filipe Souza Personal Trainer"
-            className="h-20 md:h-24 mx-auto object-contain"
+            className="h-32 md:h-44 lg:h-52 mx-auto object-contain"
           />
         </div>
 
