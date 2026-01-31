@@ -41,11 +41,10 @@ const benefits = [
 ];
 
 const PlansSection = () => {
-  const handleWhatsAppClick = () => {
-    const phoneNumber = "5518991415772";
-    const message = encodeURIComponent("Olá, quero começar minha consultoria de treino.");
-    window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`, "_blank");
-  };
+  const phoneNumber = "5518991415772";
+  const message = encodeURIComponent("Olá, quero começar minha consultoria de treino.");
+  // `wa.me` tende a ser mais compatível do que `api.whatsapp.com` (e evita o bloqueio visto no print).
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (
     <section
@@ -112,10 +111,15 @@ const PlansSection = () => {
 
         {/* WhatsApp CTA */}
         <div className="text-center">
-          <button onClick={handleWhatsAppClick} className="btn-whatsapp">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-whatsapp"
+          >
             <MessageCircle className="w-6 h-6" />
             Falar com Filipe no WhatsApp
-          </button>
+          </a>
         </div>
       </div>
     </section>
