@@ -25,11 +25,11 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
       {/* Content */}
       <div className="relative z-10 max-w-2xl mx-auto text-center animate-fade-up">
         {/* Logo */}
-        <div className="mb-10">
+        <div className="mb-12">
           <img
             src={logoF5}
             alt="F5 - Filipe Souza Personal Trainer"
-            className="h-32 md:h-44 lg:h-52 mx-auto object-contain"
+            className="h-48 md:h-64 lg:h-80 mx-auto object-contain"
           />
         </div>
 
