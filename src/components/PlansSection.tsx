@@ -42,8 +42,9 @@ const benefits = [
 
 const PlansSection = () => {
   const handleWhatsAppClick = () => {
+    const phoneNumber = "5518991415772";
     const message = encodeURIComponent("Olá, quero começar minha consultoria de treino.");
-    window.open(`https://wa.me/5518991415772?text=${message}`, "_blank");
+    window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`, "_blank");
   };
 
   return (
