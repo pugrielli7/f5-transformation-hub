@@ -1,13 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useRef } from "react";
+import HeroSection from "@/components/HeroSection";
+import ResultsSection from "@/components/ResultsSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import PlansSection from "@/components/PlansSection";
 
 const Index = () => {
+  const resultsRef = useRef<HTMLDivElement>(null);
+  const howItWorksRef = useRef<HTMLDivElement>(null);
+  const plansRef = useRef<HTMLDivElement>(null);
+
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <main className="min-h-screen">
+      <HeroSection onCtaClick={() => scrollToSection(resultsRef)} />
+      
+      <div ref={resultsRef}>
+        <ResultsSection onCtaClick={() => scrollToSection(howItWorksRef)} />
       </div>
-    </div>
+      
+      <div ref={howItWorksRef}>
+        <HowItWorksSection onCtaClick={() => scrollToSection(plansRef)} />
+      </div>
+      
+      <div ref={plansRef}>
+        <PlansSection />
+      </div>
+    </main>
   );
 };
 
