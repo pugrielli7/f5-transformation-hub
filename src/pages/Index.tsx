@@ -2,11 +2,13 @@ import { useRef } from "react";
 import HeroSection from "@/components/HeroSection";
 import ResultsSection from "@/components/ResultsSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
+import AboutSection from "@/components/AboutSection";
 import PlansSection from "@/components/PlansSection";
 
 const Index = () => {
   const resultsRef = useRef<HTMLDivElement>(null);
   const howItWorksRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
   const plansRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
@@ -22,7 +24,11 @@ const Index = () => {
       </div>
       
       <div ref={howItWorksRef}>
-        <HowItWorksSection onCtaClick={() => scrollToSection(plansRef)} />
+        <HowItWorksSection onCtaClick={() => scrollToSection(aboutRef)} />
+      </div>
+      
+      <div ref={aboutRef}>
+        <AboutSection onCtaClick={() => scrollToSection(plansRef)} />
       </div>
       
       <div ref={plansRef}>
