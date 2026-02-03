@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, ClipboardList, MessageSquare, Trophy } from "lucide-react";
+import { ArrowRight, CheckCircle, ClipboardList, MessageSquare, Trophy, Salad } from "lucide-react";
 
 interface HowItWorksSectionProps {
   onCtaClick: () => void;
@@ -14,6 +14,11 @@ const steps = [
     icon: ClipboardList,
     title: "Planejamento personalizado",
     description: "Treino e estratégia ajustados à sua realidade",
+  },
+  {
+    icon: Salad,
+    title: "Cardápio personalizado",
+    description: "Para você e sua rotina, elaborado e acompanhado por nutricionista",
   },
   {
     icon: MessageSquare,

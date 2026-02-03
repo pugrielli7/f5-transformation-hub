@@ -1,4 +1,4 @@
-import { ArrowRight, Dumbbell, UserCheck, Brain } from "lucide-react";
+import { ArrowRight, Dumbbell, UserCheck, Brain, Utensils } from "lucide-react";
 
 interface ResultsSectionProps {
   onCtaClick: () => void;
@@ -19,6 +19,11 @@ const features = [
     icon: Brain,
     title: "Estratégia física e mental",
     description: "Foco em constância, disciplina e evolução real",
+  },
+  {
+    icon: Utensils,
+    title: "Plano alimentar completo",
+    description: "Para o seu objetivo, com reajustes mensais",
   },
 ];
 
