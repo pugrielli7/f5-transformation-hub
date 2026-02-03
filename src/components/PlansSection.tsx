@@ -100,10 +100,17 @@ const PlansSection = () => {
                 ))}
               </ul>
 
-              {/* Price */}
-              <div className="pt-4 border-t border-border">
-                <p className="text-2xl font-black">{plan.price}</p>
-                <p className="text-sm text-muted-foreground">{plan.perMonth}</p>
+              {/* Price - Blurred */}
+              <div className="pt-4 border-t border-border relative">
+                <div className="blur-md select-none pointer-events-none">
+                  <p className="text-2xl font-black">{plan.price}</p>
+                  <p className="text-sm text-muted-foreground">{plan.perMonth}</p>
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full border border-primary/30">
+                    Consulte
+                  </span>
+                </div>
               </div>
             </div>
           ))}
