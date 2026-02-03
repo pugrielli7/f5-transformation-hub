@@ -1,4 +1,5 @@
-import { GraduationCap, Award, Target, Utensils, ArrowRight } from "lucide-react";
+import { GraduationCap, Award, Utensils, ArrowRight } from "lucide-react";
+import logoF5 from "@/assets/logo-f5.png";
 
 interface AboutSectionProps {
   onCtaClick: () => void;
@@ -26,8 +27,8 @@ const AboutSection = ({ onCtaClick }: AboutSectionProps) => {
           {/* Filipe */}
           <div className="card-feature p-8">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center">
-                <Target className="w-8 h-8 text-primary" />
+              <div className="w-16 h-16 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center overflow-hidden p-1">
+                <img src={logoF5} alt="Logo F5" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold">Filipe Souza</h3>
